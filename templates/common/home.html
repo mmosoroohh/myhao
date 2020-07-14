@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="tf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <!-- Custom fonts fro this template -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static '../static/css/home.css' %}" rel="stylesheet">
+    
+</head>
+
+<body>
+  <div class="about-section">
+    <h1>My Hao</h1>
+    <p>Welcome to MyHao portal</p>
+  </div>
+    <form method="POST" style="max-width:500px;margin:auto">
+      <h2>Register Form</h2>
+        {% csrf_token %}
+        {{ form }}
+      
+        <button type="submit" class="btn" value="Submit">Register</button>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="signin.html">Sign in</a>.</p>
+          </div>
+      </form>
+</body>
+</html>
